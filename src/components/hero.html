@@ -48,14 +48,19 @@
           </p>
           
           <!-- CTA Button --> 
-          <a href="https://book.nightsbridge.com/31543" id="hero-cta" class="anim-fade-up anim-delay-6 mt-16 font-sans-body text-xs tracking-[0.25em] uppercase py-4 px-8 md:px-10 transition-all duration-500" style="border: 1px solid #C9A96E; color: #C9A96E; background: transparent; display: inline-block; letter-spacing: 0.15em; position: relative; overflow: hidden;"> 
-            <span style="position: relative; z-index: 2;">
-              Book Now  
-            </span> 
-            
-            <span class="absolute inset-0" style="background: #C9A96E; transform: scaleX(0); transform-origin: left; transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1); z-index: 1;">
+          <a href="https://book.nightsbridge.com/31543" id="hero-cta"
+            class="anim-fade-up anim-delay-6 mt-16 font-sans-body text-xs uppercase py-4 px-8 md:px-10 transition-all duration-500 relative inline-block overflow-hidden group"
+            style="border: 1px solid #C9A96E; color: #C9A96E; letter-spacing: 0.15em;">
+
+            <!-- Text -->
+            <span class="relative z-10 transition-colors duration-500 group-hover:text-black">
+              Book Now
             </span>
-          </a> 
+
+            <!-- Animated Background -->
+            <span class="absolute inset-0 z-0 origin-left scale-x-0 bg-[#C9A96E] transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] group-hover:scale-x-100">
+            </span>
+          </a>
           
           <!-- Scroll indicator -->
           <div class="anim-fade-up anim-delay-6 mt-20 flex flex-col items-center gap-3">
