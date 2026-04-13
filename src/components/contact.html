@@ -86,7 +86,41 @@
           <div class="space-y-10">
 
             <!-- Location -->
-            <div>
+             <div class="grid md:grid-cols-2 gap-10 items-start">
+
+              <!-- LEFT: Address -->
+              <div>
+                <div class="flex items-start gap-3 mb-5">
+                  <i data-lucide="map-pin" style="width:16px;height:16px;color:#C9A96E;flex-shrink:0;margin-top:2px;"></i>
+                  <h3 class="font-sans-body text-xs tracking-[0.25em] uppercase" style="color: #1A1A1A; letter-spacing: 0.08em;">
+                    Location
+                  </h3>
+                </div>
+
+                <p class="font-serif-body text-sm leading-relaxed ml-6" style="color: #1A1A1A; font-weight: 300; line-height: 1.8;">
+                  1 King Haakon Road<br>
+                  Oslo Beach<br>
+                  Port Shepstone<br>
+                  Ugu District Municipality<br>
+                  KwaZulu Natal<br>
+                  South Africa, 4240
+                </p>
+              </div>
+
+              <!-- RIGHT: Map -->
+              <div>
+                <iframe
+                  src="https://www.google.com/maps?q=1%20King%20Haakon%20Rd%2C%20Oslo%20Beach%2C%20Port%20Shepstone%2C%204240&output=embed"
+                  width="100%"
+                  height="100%"
+                  class="w-full h-[300px] md:h-full"
+                  style="border:0; border-radius:12px;"
+                  loading="lazy">
+                </iframe>
+              </div>
+
+            </div>
+            <!--<div>
               <div class="flex items-start gap-3 mb-5">
                 <i data-lucide="map-pin" style="width:16px;height:16px;color:#C9A96E;flex-shrink:0;margin-top:2px;"></i>
                 <h3 class="font-sans-body text-xs tracking-[0.25em] uppercase" style="color: #1A1A1A; letter-spacing: 0.08em;">Location</h3>
@@ -108,7 +142,7 @@
                   loading="lazy">
                 </iframe>
               </div>
-            </div>
+            </div>-->
         
             <!-- Email -->
             <div>
