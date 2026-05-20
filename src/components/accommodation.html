@@ -1,153 +1,691 @@
 <!DOCTYPE html>
 <html>
   <!-- Gallery Modal -->
-<div id="galleryModal"
-  class="fixed inset-0 z-[9999] hidden items-center justify-center"
-  style="background: rgba(0,0,0,0.92); backdrop-filter: blur(6px);">
+  <div id="galleryModal"
+    class="fixed inset-0 z-[9999] hidden items-center justify-center"
+    style="background: rgba(0,0,0,0.92); backdrop-filter: blur(6px);">
 
-  <!-- Close button -->
-  <button onclick="closeGallery()"
-    class="absolute top-6 right-6 text-white text-2xl"
-    aria-label="Close">
-    ✕
-  </button>
+    <!-- Close button -->
+    <button onclick="closeGallery()"
+      class="absolute top-6 right-6 text-white text-2xl"
+      aria-label="Close">
+      ✕
+    </button>
 
-  <!-- Left arrow -->
-  <button onclick="prevImage()"
-    class="absolute left-6 text-white text-3xl px-3">
-    ‹
-  </button>
+    <!-- Left arrow -->
+    <button onclick="prevImage()"
+      class="absolute left-6 text-white text-3xl px-3">
+      ‹
+    </button>
 
-  <!-- Image -->
-  <div class="max-w-5xl w-full px-6">
-    <img id="galleryImage"
-      src=""
-      class="w-full max-h-[85vh] object-contain rounded-lg shadow-2xl"
-      alt="Gallery image">
+    <!-- Image -->
+    <div class="max-w-5xl w-full px-6">
+      <img id="galleryImage"
+        src=""
+        class="w-full max-h-[85vh] object-contain rounded-lg shadow-2xl"
+        alt="Gallery image">
+    </div>
+
+    <!-- Right arrow -->
+    <button onclick="nextImage()"
+      class="absolute right-6 text-white text-3xl px-3">
+      ›
+    </button>
   </div>
 
-  <!-- Right arrow -->
-  <button onclick="nextImage()"
-    class="absolute right-6 text-white text-3xl px-3">
-    ›
-  </button>
-</div>
+  <!-- Accommodation Section -->
+  <section id="accommodation" class="px-6 md:px-12" style="padding-top: 120px; padding-bottom: 140px;">
+    <div class="max-w-7xl mx-auto">
+      <div class="reveal text-center mb-28">
+        <div class="font-sans-body text-xs tracking-[0.3em] uppercase mb-8" style="color: #C9A96E;">
+          Accommodation
+        </div>
+        <h2 class="font-serif-display text-4xl md:text-5xl lg:text-6xl font-normal mb-12" id="accommodation-heading" 
+          style="color: #1A1A1A;">The Experience</h2>
+        <div class="thin-divider mx-auto"></div>
+      </div>
+     
+      <!-- Property 1: 16 Marine Drive -->
+      <div class="mb-32">
+        <div class="reveal mb-16">
+          <h3 class="font-sans-body text-sm tracking-[0.3em] uppercase" style="color: #C9A96E; letter-spacing: 0.1em; margin-bottom: 8px;">
+            Property One
+          </h3>
+          <h2 class="font-serif-display text-3xl md:text-4xl font-normal" style="color: #1A1A1A;">
+            16 Marine Drive — Rooms
+          </h2>
+        </div>
 
-<script>
-const galleries = {
-  panda: [
-    "/src/images/Pan1.jpg",
-    "/src/images/Pan2.jpg",
-    "/src/images/Pan3.jpg",
-    "/src/images/Pan4.jpg"
-  ],
-  ngwenya: [
-    "/src/images/NN1.jpg",
-    "/src/images/NN2.jpg",
-    "/src/images/NN3.jpg",
-    "/src/images/NN4.jpg"
-  ],
-  mandlovu: [
-    "/src/images/MaN1.jpg",
-    "/src/images/MaN2.jpg",
-    "/src/images/MaN3.jpg",
-    "/src/images/MaN4.jpg"
-  ],
-  tshieng: [
-    "/src/images/Tsh1.jpg",
-    "/src/images/Tsh2.jpg",
-    "/src/images/Tsh3.jpg",
-    "/src/images/Tsh4.jpg"
-  ],
-  tolo: [
-    "/src/images/TB1.jpg",
-    "/src/images/TB2.jpg",
-    "/src/images/TB3.jpg",
-    "/src/images/TB4.jpg"
-  ],
-  xola: [
-    "/src/images/Xol1.jpg",
-    "/src/images/Xol2.jpg",
-    "/src/images/Xol3.jpg",
-    "/src/images/Xol4.jpg"
-  ],
-  lekgolokwe: [
-    "/src/images/LKG1.jpg",
-    "/src/images/LKG2.jpg",
-    "/src/images/LKG3.jpg",
-    "/src/images/LKG4.jpg"
-  ],
-  letlotlo: [
-    "/src/images/Let1.jpg",
-    "/src/images/Let2.jpg",
-    "/src/images/Let3.jpg",
-    "/src/images/Let4.jpg"
-  ],
-  phuleng: [
-    "/src/images/Phu1.jpeg",
-    "/src/images/Phu2.jpeg",
-    "/src/images/Phu3.jpeg",
-    "/src/images/Phu4.jpeg"
-  ]
-};
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+          <!-- Panda Room -->
+          <div class="reveal luxury-feature-card p-8 rounded-lg" style="background: linear-gradient(135deg, #FFFFFF 0%, #FAFAF8 100%);">
+            <div class="mb-6">
+              <div class="w-12 h-12 flex items-center justify-center mb-4" style="background: rgba(201,169,110,0.08); border-radius: 8px;">
+                <img 
+                  src="/src/images/1.svg" 
+                  alt="Panda icon"
+                  class="w-full h-full object-contain opacity-90"
+                />
+              </div>
+              <h3 class="font-serif-display text-xl mb-2" style="color: #1A1A1A;">
+                Panda
+              </h3>
+              <p class="font-sans-body text-xs tracking-[0.1em] uppercase" style="color: #C9A96E; letter-spacing: 0.05em;">
+                Double Room
+              </p>
+            </div>
+        
+            <!-- Room gallery grid -->
+            <div class="grid grid-cols-2 gap-3 mb-6">
+              <div class="aspect-square rounded overflow-hidden cursor-pointer"
+                data-gallery="panda" data-index="0">
+                <img src="/src/images/Pan1.jpg" class="w-full h-full object-cover">
+              </div>
 
-let currentGallery = [];
-let currentIndex = 0;
+              <div class="aspect-square rounded overflow-hidden cursor-pointer"
+                data-gallery="panda" data-index="1">
+                <img src="/src/images/Pan2.jpg" class="w-full h-full object-cover">
+              </div>
 
-/* OPEN GALLERY */
-document.querySelectorAll("[data-gallery]").forEach(el => {
-  el.addEventListener("click", (e) => {
-    const key = e.currentTarget.dataset.gallery;
+              <div class="aspect-square rounded overflow-hidden cursor-pointer"
+                data-gallery="panda" data-index="2">
+                <img src="/src/images/Pan3.jpg" class="w-full h-full object-cover">
+              </div>
 
-    currentGallery = galleries[key] || [];
-    currentIndex = parseInt(e.currentTarget.dataset.index || 0);
+              <div class="aspect-square rounded overflow-hidden cursor-pointer"
+                data-gallery="panda" data-index="3">
+                <img src="/src/images/Pan4.jpg" class="w-full h-full object-cover">
+              </div>
+            </div>
+            <div style="height: 1px; background: rgba(201,169,110,0.15); margin-bottom: 12px;"></div>
+            <p class="font-serif-body text-sm leading-relaxed mb-6" style="color: #A89F94; font-weight: 300;">
+              Intimate three-quarter room with en-suite bathroom.
+            </p>
+            <div class="flex items-center gap-3" style="color: #A89F94;"><i data-lucide="user" style="width:14px;height:14px;"></i> 
+              <span class="font-sans-body text-xs" style="font-weight: 300;">
+                Sleeps 2
+              </span>
+              <span class="font-sans-body text-xs" style="font-weight: 300;">
+                From R 685.00
+              </span>
+              <span class="font-sans-body text-xs" style="font-weight: 300;">
+                <a href="https://book.nightsbridge.com/31543" target="_blank" rel="noopener noreferrer" 
+                  class="font-sans-body text-xs tracking-[0.25em] uppercase py-2 px-5 transition-all duration-400" 
+                  style="border: 2px solid #C9A96E; color: #C9A96E; background: transparent; display: inline-block; 
+                  letter-spacing: 0.15em; border-radius: 2px;">
+                  Book Now
+                </a>
+              </span>
+            </div>
+          </div>
+       
+          <!-- Ngwenya Nkomo Room -->
+          <div class="reveal luxury-feature-card p-8 rounded-lg" style="background: linear-gradient(135deg, #FFFFFF 0%, #FAFAF8 100%);">
+            <div class="mb-6">
+              <div class="w-12 h-12 flex items-center justify-center mb-4" style="background: rgba(201,169,110,0.08); border-radius: 8px;">
+                <img 
+                  src="/src/images/3.svg" 
+                  alt="Ngwenya Nkomo icon"
+                  class="w-full h-full object-contain opacity-90"
+                />
+              </div>
+              <h3 class="font-serif-display text-xl mb-2" style="color: #1A1A1A;">
+                Ngwenya Nkomo
+              </h3>
+              <p class="font-sans-body text-xs tracking-[0.1em] uppercase" style="color: #C9A96E; letter-spacing: 0.05em;">
+                Family Room
+              </p>
+            </div>
 
-    if (!currentGallery.length) return;
+            <div class="grid grid-cols-2 gap-3 mb-6">
+              <div class="aspect-square rounded overflow-hidden" style="background: rgba(201,169,110,0.1);">
+                <img src="/src/images/NN1.jpg" alt="Ngwenya Nkomo-1" class="w-full h-full object-cover">
+              </div>
+              <div class="aspect-square rounded overflow-hidden" style="background: rgba(201,169,110,0.1);">
+                <img src="/src/images/NN2.jpg" alt="Ngwenya Nkomo-2" class="w-full h-full object-cover">
+              </div>
+              <div class="aspect-square rounded overflow-hidden" style="background: rgba(201,169,110,0.1);">
+                <img src="/src/images/NN3.jpg" alt="Ngwenya Nkomo-3" class="w-full h-full object-cover">
+              </div>
+              <div class="aspect-square rounded overflow-hidden" style="background: rgba(201,169,110,0.1);">
+                <img src="/src/images/NN4.jpg" alt="Ngwenya Nkomo-4" class="w-full h-full object-cover">
+              </div>
+            </div>
+            <div style="height: 1px; background: rgba(201,169,110,0.15); margin-bottom: 12px;"></div>
+            <p class="font-serif-body text-sm leading-relaxed mb-6" style="color: #A89F94; font-weight: 300;">
+              Spacious family room featuring premium amenities and a private bathroom conveniently located adjacent to the room.
+            </p>
+            <div class="flex items-center gap-3" style="color: #A89F94;"><i data-lucide="user" style="width:14px;height:14px;"></i>
+              <span class="font-sans-body text-xs" style="font-weight: 300;">
+                Sleeps 4
+              </span>
+              <span class="font-sans-body text-xs" style="font-weight: 300;">
+                From R 825.00
+              </span>
+              <span class="font-sans-body text-xs" style="font-weight: 300;">
+                <a href="https://book.nightsbridge.com/31543" target="_blank" rel="noopener noreferrer" 
+                  class="font-sans-body text-xs tracking-[0.25em] uppercase py-2 px-5 transition-all duration-400" 
+                  style="border: 2px solid #C9A96E; color: #C9A96E; background: transparent; display: inline-block; 
+                  letter-spacing: 0.15em; border-radius: 2px;">
+                  Book Now
+                </a>
+              </span>
+            </div>
+          </div>
+       
+          <!-- MaNdlovu Room -->
+          <div class="reveal luxury-feature-card p-8 rounded-lg" style="background: linear-gradient(135deg, #FFFFFF 0%, #FAFAF8 100%);">
+            <div class="mb-6">
+              <div class="w-12 h-12 flex items-center justify-center mb-4" style="background: rgba(201,169,110,0.08); border-radius: 8px;">
+                <img 
+                  src="/src/images/4.svg" 
+                  alt="MaNdlovu icon"
+                  class="w-full h-full object-contain opacity-90"
+                />
+              </div>
+              <h3 class="font-serif-display text-xl mb-2" style="color: #1A1A1A;">
+                MaNdlovu
+              </h3>
+              <p class="font-sans-body text-xs tracking-[0.1em] uppercase" style="color: #C9A96E; letter-spacing: 0.05em;">
+                Triple Room
+              </p>
+            </div>
 
-    openGallery();
+            <div class="grid grid-cols-2 gap-3 mb-6">
+              <div class="aspect-square rounded overflow-hidden" style="background: rgba(201,169,110,0.1);">
+                <img src="/src/images/MaN1.jpg" alt="MaNdlovu-1" class="w-full h-full object-cover">
+              </div>
+              <div class="aspect-square rounded overflow-hidden" style="background: rgba(201,169,110,0.1);">
+                <img src="/src/images/MaN2.jpg" alt="MaNdlovu-2" class="w-full h-full object-cover">
+              </div>
+              <div class="aspect-square rounded overflow-hidden" style="background: rgba(201,169,110,0.1);">
+                <img src="/src/images/MaN3.jpg" alt="MaNdlovu-3" class="w-full h-full object-cover">
+              </div>
+              <div class="aspect-square rounded overflow-hidden" style="background: rgba(201,169,110,0.1);">
+                <img src="/src/images/MaN4.jpg" alt="MaNdlovu-4" class="w-full h-full object-cover">
+              </div>
+            </div>
+            <div style="height: 1px; background: rgba(201,169,110,0.15); margin-bottom: 12px;"></div>
+            <p class="font-serif-body text-sm leading-relaxed mb-6" style="color: #A89F94; font-weight: 300;">
+              En-suite bathroom with premium amenities.
+            </p>
+            <div class="flex items-center gap-3" style="color: #A89F94;"><i data-lucide="user" style="width:14px;height:14px;"></i> 
+              <span class="font-sans-body text-xs" style="font-weight: 300;">
+                Sleeps 2
+              </span>
+              <span class="font-sans-body text-xs" style="font-weight: 300;">
+                From R 685.00
+              </span>
+              <span class="font-sans-body text-xs" style="font-weight: 300;">
+                <a href="https://book.nightsbridge.com/31543" target="_blank" rel="noopener noreferrer" 
+                  class="font-sans-body text-xs tracking-[0.25em] uppercase py-2 px-5 transition-all duration-400" 
+                  style="border: 2px solid #C9A96E; color: #C9A96E; background: transparent; display: inline-block; 
+                  letter-spacing: 0.15em; border-radius: 2px;">
+                  Book Now
+                </a>
+              </span>
+            </div>
+          </div>
+       
+          <!-- Tshieng Room -->
+          <div class="reveal luxury-feature-card p-8 rounded-lg" style="background: linear-gradient(135deg, #FFFFFF 0%, #FAFAF8 100%);">
+            <div class="mb-6">
+              <div class="w-12 h-12 flex items-center justify-center mb-4" style="background: rgba(201,169,110,0.08); border-radius: 8px;">
+                <img 
+                  src="/src/images/2.svg" 
+                  alt="Tshieng icon"
+                  class="w-full h-full object-contain opacity-90"
+                />
+              </div>
+              <h3 class="font-serif-display text-xl mb-2" style="color: #1A1A1A;">
+                Tshieng
+              </h3>
+              <p class="font-sans-body text-xs tracking-[0.1em] uppercase" style="color: #C9A96E; letter-spacing: 0.05em;">
+                Double Room
+              </p>
+            </div>
+
+            <div class="grid grid-cols-2 gap-3 mb-6">
+              <div class="aspect-square rounded overflow-hidden" style="background: rgba(201,169,110,0.1);">
+                <img src="/src/images/Tsh1.jpg" alt="Tshieng-1" class="w-full h-full object-cover">
+              </div>
+              <div class="aspect-square rounded overflow-hidden" style="background: rgba(201,169,110,0.1);">
+                <img src="/src/images/Tsh2.jpg" alt="Tshieng-2" class="w-full h-full object-cover">
+              </div>
+              <div class="aspect-square rounded overflow-hidden" style="background: rgba(201,169,110,0.1);">
+                <img src="/src/images/Tsh3.jpg" alt="Tshieng-3" class="w-full h-full object-cover">
+              </div>
+              <div class="aspect-square rounded overflow-hidden" style="background: rgba(201,169,110,0.1);">
+                <img src="/src/images/Tsh4.jpg" alt="Tshieng-4" class="w-full h-full object-cover">
+              </div>
+            </div>
+            <div style="height: 1px; background: rgba(201,169,110,0.15); margin-bottom: 12px;"></div>
+            <p class="font-serif-body text-sm leading-relaxed mb-6" style="color: #A89F94; font-weight: 300;">
+              Comfortable double room with en-suite bathroom.
+            </p>
+            <div class="flex items-center gap-3" style="color: #A89F94;"><i data-lucide="user" style="width:14px;height:14px;"></i> 
+              <span class="font-sans-body text-xs" style="font-weight: 300;">
+                Sleeps 2
+              </span>
+              <span class="font-sans-body text-xs" style="font-weight: 300;">
+                From R 685.00
+              </span>
+              <span class="font-sans-body text-xs" style="font-weight: 300;">
+                <a href="https://book.nightsbridge.com/31543" target="_blank" rel="noopener noreferrer" 
+                  class="font-sans-body text-xs tracking-[0.25em] uppercase py-2 px-5 transition-all duration-400" 
+                  style="border: 2px solid #C9A96E; color: #C9A96E; background: transparent; display: inline-block; 
+                  letter-spacing: 0.15em; border-radius: 2px;">
+                  Book Now
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+     
+      <!-- Divider -->
+      <div style="height: 1px; background: rgba(168,159,148,0.2); margin-bottom: 32px;"></div>
+     
+      <!-- Property 2: 1 King Haakon Road -->
+      <div>
+        <div class="reveal mb-16">
+          <h3 class="font-sans-body text-sm tracking-[0.3em] uppercase" style="color: #C9A96E; letter-spacing: 0.1em; margin-bottom: 8px;">
+            Property Two
+          </h3>
+          <h2 class="font-serif-display text-3xl md:text-4xl font-normal" style="color: #1A1A1A;">
+            1 King Haakon Road — Rooms
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+          <!-- ToloBasia Room -->
+          <div class="reveal luxury-feature-card p-8 rounded-lg" style="background: linear-gradient(135deg, #FFFFFF 0%, #FAFAF8 100%);">
+            <div class="mb-6">
+              <div class="w-12 h-12 flex items-center justify-center mb-4" style="background: rgba(201,169,110,0.08); border-radius: 8px;">
+                <img 
+                  src="/src/images/8.svg" 
+                  alt="ToloBasia icon"
+                  class="w-full h-full object-contain opacity-90"
+                />
+              </div>
+              <h3 class="font-serif-display text-xl mb-2" style="color: #1A1A1A;">
+                ToloBasia
+              </h3>
+              <p class="font-sans-body text-xs tracking-[0.1em] uppercase" style="color: #C9A96E; letter-spacing: 0.05em;">
+                Double Room
+              </p>
+            </div>
+          
+            <!-- Room gallery grid -->
+            <div class="grid grid-cols-2 gap-3 mb-6">
+              <div class="aspect-square rounded overflow-hidden" style="background: rgba(201,169,110,0.1);">
+                <img src="/src/images/TB1.jpg" alt="ToloBasia-1" class="w-full h-full object-cover">
+              </div>
+              <div class="aspect-square rounded overflow-hidden" style="background: rgba(201,169,110,0.1);">
+                <img src="/src/images/TB2.jpg" alt="ToloBasia-2" class="w-full h-full object-cover">
+              </div>
+              <div class="aspect-square rounded overflow-hidden" style="background: rgba(201,169,110,0.1);">
+                <img src="/src/images/TB3.jpg" alt="ToloBasia-3" class="w-full h-full object-cover">
+              </div>
+              <div class="aspect-square rounded overflow-hidden" style="background: rgba(201,169,110,0.1);">
+                <img src="/src/images/TB4.jpg" alt="ToloBasia-4" class="w-full h-full object-cover">
+              </div>
+            </div>
+            <div style="height: 1px; background: rgba(201,169,110,0.15); margin-bottom: 12px;"></div>
+            <p class="font-serif-body text-sm leading-relaxed mb-6" style="color: #A89F94; font-weight: 300;">En-suite bathroom with elegant design.</p>
+            <div class="flex items-center gap-3" style="color: #A89F94;"><i data-lucide="user" style="width:14px;height:14px;"></i> 
+              <span class="font-sans-body text-xs" style="font-weight: 300;">
+                Sleeps 2
+              </span>
+              <span class="font-sans-body text-xs" style="font-weight: 300;">
+                From R 685.00
+              </span>
+              <span class="font-sans-body text-xs" style="font-weight: 300;">
+                <a href="https://book.nightsbridge.com/31543" target="_blank" rel="noopener noreferrer" 
+                  class="font-sans-body text-xs tracking-[0.25em] uppercase py-2 px-5 transition-all duration-400" 
+                  style="border: 2px solid #C9A96E; color: #C9A96E; background: transparent; display: inline-block; 
+                  letter-spacing: 0.15em; border-radius: 2px;">
+                  Book Now
+                </a>
+              </span>
+            </div>
+          </div>
+        
+          <!-- Xola Room -->
+          <div class="reveal luxury-feature-card p-8 rounded-lg" style="background: linear-gradient(135deg, #FFFFFF 0%, #FAFAF8 100%);">
+            <div class="mb-6">
+              <div class="w-12 h-12 flex items-center justify-center mb-4" style="background: rgba(201,169,110,0.08); border-radius: 8px;">
+                <img 
+                  src="/src/images/7.svg" 
+                  alt="Xola icon"
+                  class="w-full h-full object-contain opacity-90"
+                />
+              </div>
+              <h3 class="font-serif-display text-xl mb-2" style="color: #1A1A1A;">
+                Xola
+              </h3>
+              <p class="font-sans-body text-xs tracking-[0.1em] uppercase" style="color: #C9A96E; letter-spacing: 0.05em;">
+                Three Quarter Room
+              </p>
+            </div>
+          
+            <!-- Room gallery grid -->
+            <div class="grid grid-cols-2 gap-3 mb-6">
+              <div class="aspect-square rounded overflow-hidden" style="background: rgba(201,169,110,0.1);">
+                <img src="/src/images/Xol1.jpg" alt="Xola-1" class="w-full h-full object-cover">
+              </div>
+              <div class="aspect-square rounded overflow-hidden" style="background: rgba(201,169,110,0.1);">
+                <img src="/src/images/Xol2.jpg" alt="Xola-2" class="w-full h-full object-cover">
+              </div>
+              <div class="aspect-square rounded overflow-hidden" style="background: rgba(201,169,110,0.1);">
+                <img src="/src/images/Xol3.jpg" alt="Xola-3" class="w-full h-full object-cover">
+              </div>
+              <div class="aspect-square rounded overflow-hidden" style="background: rgba(201,169,110,0.1);">
+                <img src="/src/images/Xol4.jpg" alt="Xola-4" class="w-full h-full object-cover">
+              </div>
+            </div>
+            <div style="height: 1px; background: rgba(201,169,110,0.15); margin-bottom: 12px;"></div>
+            <p class="font-serif-body text-sm leading-relaxed mb-6" style="color: #A89F94; font-weight: 300;">
+              Comfortable double with en-suite bathroom.
+            </p>
+            <div class="flex items-center gap-3" style="color: #A89F94;"><i data-lucide="user" style="width:14px;height:14px;"></i> 
+              <span class="font-sans-body text-xs" style="font-weight: 300;">
+                Sleeps 1
+              </span>
+              <span class="font-sans-body text-xs" style="font-weight: 300;">
+                From R 685.00
+              </span>
+              <span class="font-sans-body text-xs" style="font-weight: 300;">
+                <a href="https://book.nightsbridge.com/31543" target="_blank" rel="noopener noreferrer" 
+                  class="font-sans-body text-xs tracking-[0.25em] uppercase py-2 px-5 transition-all duration-400" 
+                  style="border: 2px solid #C9A96E; color: #C9A96E; background: transparent; display: inline-block; 
+                  letter-spacing: 0.15em; border-radius: 2px;">
+                  Book Now
+                </a>
+              </span>
+            </div>
+          </div>
+        
+          <!-- Lekgolokwe Room -->
+          <div class="reveal luxury-feature-card p-8 rounded-lg" style="background: linear-gradient(135deg, #FFFFFF 0%, #FAFAF8 100%);">
+            <div class="mb-6">
+              <div class="w-12 h-12 flex items-center justify-center mb-4" style="background: rgba(201,169,110,0.08); border-radius: 8px;">
+                <img 
+                  src="/src/images/5.svg" 
+                  alt="Lekgolokwe icon"
+                  class="w-full h-full object-contain opacity-90"
+                />
+              </div>
+              <h3 class="font-serif-display text-xl mb-2" style="color: #1A1A1A;">
+                Lekgolokwe
+              </h3>
+              <p class="font-sans-body text-xs tracking-[0.1em] uppercase" style="color: #C9A96E; letter-spacing: 0.05em;">
+                Double Room
+              </p>
+            </div>
+            
+            <!-- Room gallery grid -->
+            <div class="grid grid-cols-2 gap-3 mb-6">
+              <div class="aspect-square rounded overflow-hidden" style="background: rgba(201,169,110,0.1);">
+                <img src="/src/images/LKG1.jpg" alt="Lekgolokwe-1" class="w-full h-full object-cover">
+              </div>
+              <div class="aspect-square rounded overflow-hidden" style="background: rgba(201,169,110,0.1);">
+                <img src="/src/images/LKG2.jpg" alt="Lekgolokwe-2" class="w-full h-full object-cover">
+              </div>
+              <div class="aspect-square rounded overflow-hidden" style="background: rgba(201,169,110,0.1);">
+                <img src="/src/images/LKG3.jpg" alt="Lekgolokwe-3" class="w-full h-full object-cover">
+              </div>
+              <div class="aspect-square rounded overflow-hidden" style="background: rgba(201,169,110,0.1);">
+                <img src="/src/images/LKG4.jpg" alt="Lekgolokwe-4" class="w-full h-full object-cover">
+              </div>
+            </div>
+            <div style="height: 1px; background: rgba(201,169,110,0.15); margin-bottom: 12px;"></div>
+            <p class="font-serif-body text-sm leading-relaxed mb-6" style="color: #A89F94; font-weight: 300;">
+              En-suite bathroom with premium amenities.
+            </p>
+            <div class="flex items-center gap-3" style="color: #A89F94;">
+              <i data-lucide="user" style="width:14px;height:14px;"></i> 
+              <span class="font-sans-body text-xs" style="font-weight: 300;">
+                Sleeps 2
+              </span>
+              <span class="font-sans-body text-xs" style="font-weight: 300;">
+                From R 685.00
+              </span>
+              <span class="font-sans-body text-xs" style="font-weight: 300;">
+                <a href="https://book.nightsbridge.com/31543" target="_blank" rel="noopener noreferrer" 
+                  class="font-sans-body text-xs tracking-[0.25em] uppercase py-2 px-5 transition-all duration-400" 
+                  style="border: 2px solid #C9A96E; color: #C9A96E; background: transparent; display: inline-block; 
+                  letter-spacing: 0.15em; border-radius: 2px;">
+                  Book Now
+                </a>
+              </span>
+            </div>
+          </div>
+        
+          <!-- Letlotlo Room -->
+          <div class="reveal luxury-feature-card p-8 rounded-lg" style="background: linear-gradient(135deg, #FFFFFF 0%, #FAFAF8 100%);">
+            <div class="mb-6">
+              <div class="w-12 h-12 flex items-center justify-center mb-4" style="background: rgba(201,169,110,0.08); border-radius: 8px;">
+                <img 
+                  src="/src/images/6.svg" 
+                  alt="Letlotlo icon"
+                  class="w-full h-full object-contain opacity-90"
+                />
+              </div>
+              <h3 class="font-serif-display text-xl mb-2" style="color: #1A1A1A;">
+                Letlotlo
+              </h3>
+              <p class="font-sans-body text-xs tracking-[0.1em] uppercase" style="color: #C9A96E; letter-spacing: 0.05em;">Double Room</p>
+            </div>
+            
+            <!-- Room gallery grid -->
+            <div class="grid grid-cols-2 gap-3 mb-6">
+              <div class="aspect-square rounded overflow-hidden" style="background: rgba(201,169,110,0.1);">
+                <img src="/src/images/Let1.jpg" alt="Letlotlo-1" class="w-full h-full object-cover">
+              </div>
+              <div class="aspect-square rounded overflow-hidden" style="background: rgba(201,169,110,0.1);">
+                <img src="/src/images/Let2.jpg" alt="Letlotlo-2" class="w-full h-full object-cover">
+              </div>
+              <div class="aspect-square rounded overflow-hidden" style="background: rgba(201,169,110,0.1);">
+                <img src="/src/images/Let3.jpg" alt="Letlotlo-3" class="w-full h-full object-cover">
+              </div>
+              <div class="aspect-square rounded overflow-hidden" style="background: rgba(201,169,110,0.1);">
+                <img src="/src/images/Let4.jpg" alt="Letlotlo-4" class="w-full h-full object-cover">
+              </div>
+            </div>
+            <div style="height: 1px; background: rgba(201,169,110,0.15); margin-bottom: 12px;"></div>
+            <p class="font-serif-body text-sm leading-relaxed mb-6" style="color: #A89F94; font-weight: 300;">
+              En-suite bathroom with elegant design.
+            </p>
+            <div class="flex items-center gap-3" style="color: #A89F94;">
+              <i data-lucide="user" style="width:14px;height:14px;"></i> 
+              <span class="font-sans-body text-xs" style="font-weight: 300;">
+                Sleeps 2
+              </span>
+              <span class="font-sans-body text-xs" style="font-weight: 300;">
+                From R 685.00
+              </span>
+              <span class="font-sans-body text-xs" style="font-weight: 300;">
+                <a href="https://book.nightsbridge.com/31543" target="_blank" rel="noopener noreferrer" 
+                  class="font-sans-body text-xs tracking-[0.25em] uppercase py-2 px-5 transition-all duration-400" 
+                  style="border: 2px solid #C9A96E; color: #C9A96E; background: transparent; display: inline-block; 
+                  letter-spacing: 0.15em; border-radius: 2px;">
+                  Book Now
+                </a>
+              </span>
+            </div>
+          </div>
+        
+          <!-- Phuleng Room -->
+          <div class="reveal luxury-feature-card p-8 rounded-lg" style="background: linear-gradient(135deg, #FFFFFF 0%, #FAFAF8 100%);">
+            <div class="mb-6">
+              <div class="w-12 h-12 flex items-center justify-center mb-4" style="background: rgba(201,169,110,0.08); border-radius: 8px;">
+                <img 
+                  src="/src/images/9.svg" 
+                  alt="Phuleng icon"
+                  class="w-full h-full object-contain opacity-90"
+                />
+              </div>
+              <h3 class="font-serif-display text-xl mb-2" style="color: #1A1A1A;">
+                Phuleng
+              </h3>
+              <p class="font-sans-body text-xs tracking-[0.1em] uppercase" style="color: #C9A96E; letter-spacing: 0.05em;">
+                Triple Room
+              </p>
+            </div>
+            
+            <!-- Room gallery grid -->
+            <div class="grid grid-cols-2 gap-3 mb-6">
+              <div class="aspect-square rounded overflow-hidden" style="background: rgba(201,169,110,0.1);">
+                <img src="/src/images/Phu1.jpeg" alt="Phuleng-1" class="w-full h-full object-cover">
+              </div>
+              <div class="aspect-square rounded overflow-hidden" style="background: rgba(201,169,110,0.1);">
+                <img src="/src/images/Phu2.jpeg" alt="Phuleng-2" class="w-full h-full object-cover">
+              </div>
+              <div class="aspect-square rounded overflow-hidden" style="background: rgba(201,169,110,0.1);">
+                <img src="/src/images/Phu3.jpeg" alt="Phuleng-3" class="w-full h-full object-cover">
+              </div>
+              <div class="aspect-square rounded overflow-hidden" style="background: rgba(201,169,110,0.1);">
+                <img src="/src/images/Phu4.jpeg" alt="Phuleng-4" class="w-full h-full object-cover">
+              </div>
+            </div>
+            <div style="height: 1px; background: rgba(201,169,110,0.15); margin-bottom: 12px;"></div>
+            <p class="font-serif-body text-sm leading-relaxed mb-6" style="color: #A89F94; font-weight: 300;">
+              Spacious triple room with elegant furnishings.
+            </p>
+            <div class="flex items-center gap-3" style="color: #A89F94;"><i data-lucide="user" style="width:14px;height:14px;"></i> 
+              <span class="font-sans-body text-xs" style="font-weight: 300;">
+                Sleeps 3
+              </span>
+              <span class="font-sans-body text-xs" style="font-weight: 300;">
+                From R 685.00
+              </span>
+              <span class="font-sans-body text-xs" style="font-weight: 300;">
+                <a href="https://book.nightsbridge.com/31543" target="_blank" rel="noopener noreferrer" 
+                  class="font-sans-body text-xs tracking-[0.25em] uppercase py-2 px-5 transition-all duration-400" 
+                  style="border: 2px solid #C9A96E; color: #C9A96E; background: transparent; display: inline-block; 
+                  letter-spacing: 0.15em; border-radius: 2px;">
+                  Book Now
+                </a>
+              </span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+        
+  <!-- Divider -->
+  <div class="max-w-7xl mx-auto px-6 md:px-12">
+    <div style="height:1px; background: rgba(168,159,148,0.2);"></div>
+  </div>
+
+  <script>
+  const galleries = {
+    panda: [
+      "/src/images/Pan1.jpg",
+      "/src/images/Pan2.jpg",
+      "/src/images/Pan3.jpg",
+      "/src/images/Pan4.jpg"
+    ],
+    ngwenya: [
+      "/src/images/NN1.jpg",
+      "/src/images/NN2.jpg",
+      "/src/images/NN3.jpg",
+      "/src/images/NN4.jpg"
+    ],
+    man: [
+      "/src/images/MaN1.jpg",
+      "/src/images/MaN2.jpg",
+      "/src/images/MaN3.jpg",
+      "/src/images/MaN4.jpg"
+    ],
+    tshieng: [
+      "/src/images/Tsh1.jpg",
+      "/src/images/Tsh2.jpg",
+      "/src/images/Tsh3.jpg",
+      "/src/images/Tsh4.jpg"
+    ],
+    tolo: [
+      "/src/images/TB1.jpg",
+      "/src/images/TB2.jpg",
+      "/src/images/TB3.jpg",
+      "/src/images/TB4.jpg"
+    ],
+    xola: [
+      "/src/images/Xol1.jpg",
+      "/src/images/Xol2.jpg",
+      "/src/images/Xol3.jpg",
+      "/src/images/Xol4.jpg"
+    ],
+    lekgolokwe: [
+      "/src/images/LKG1.jpg",
+      "/src/images/LKG2.jpg",
+      "/src/images/LKG3.jpg",
+      "/src/images/LKG4.jpg"
+    ],
+    letlotlo: [
+      "/src/images/Let1.jpg",
+      "/src/images/Let2.jpg",
+      "/src/images/Let3.jpg",
+      "/src/images/Let4.jpg"
+    ],
+    phuleng: [
+      "/src/images/Phu1.jpeg",
+      "/src/images/Phu2.jpeg",
+      "/src/images/Phu3.jpeg",
+      "/src/images/Phu4.jpeg"
+    ]
+  };
+
+  let currentGallery = [];
+  let currentIndex = 0;
+
+  // OPEN
+  document.querySelectorAll("[data-gallery]").forEach(el => {
+    el.addEventListener("click", () => {
+      const key = el.dataset.gallery;
+      currentGallery = galleries[key];
+      currentIndex = parseInt(el.dataset.index || 0);
+      openGallery();
+    });
   });
-});
 
-function openGallery() {
-  document.getElementById("galleryModal").classList.remove("hidden");
-  document.getElementById("galleryModal").classList.add("flex");
-  document.body.style.overflow = "hidden";
-  updateImage();
-}
+  function openGallery() {
+    document.getElementById("galleryModal").classList.remove("hidden");
+    document.getElementById("galleryModal").classList.add("flex");
+    updateImage();
+  }
 
-function closeGallery() {
-  document.getElementById("galleryModal").classList.add("hidden");
-  document.getElementById("galleryModal").classList.remove("flex");
-  document.body.style.overflow = "auto";
-}
+  function closeGallery() {
+    document.getElementById("galleryModal").classList.add("hidden");
+    document.getElementById("galleryModal").classList.remove("flex");
+  }
 
-function updateImage() {
-  document.getElementById("galleryImage").src =
-    currentGallery[currentIndex];
-}
+  function updateImage() {
+    document.getElementById("galleryImage").src =
+      currentGallery[currentIndex];
+  }
 
-function nextImage() {
-  currentIndex = (currentIndex + 1) % currentGallery.length;
-  updateImage();
-}
+  function nextImage() {
+    currentIndex = (currentIndex + 1) % currentGallery.length;
+    updateImage();
+  }
 
-function prevImage() {
-  currentIndex =
-    (currentIndex - 1 + currentGallery.length) % currentGallery.length;
-  updateImage();
-}
+  function prevImage() {
+    currentIndex =
+      (currentIndex - 1 + currentGallery.length) % currentGallery.length;
+    updateImage();
+  }
 
-/* Keyboard controls */
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") closeGallery();
-  if (e.key === "ArrowRight") nextImage();
-  if (e.key === "ArrowLeft") prevImage();
-});
-
-/* Optional: preload images for smoother UX */
-Object.values(galleries).flat().forEach(src => {
-  const img = new Image();
-  img.src = src;
-});
+  // ESC key support
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeGallery();
+    if (e.key === "ArrowRight") nextImage();
+    if (e.key === "ArrowLeft") prevImage();
+  });
 </script>
 </html>
