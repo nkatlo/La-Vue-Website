@@ -12,17 +12,17 @@
         <div class="thin-divider mx-auto"></div>
       </div>
      
-      <div class="reveal grid grid-cols-1 lg:grid-cols-5 gap-12 md:gap-16 items-start">
+      <div class="reveal grid grid-cols-1 gap-12 md:gap-16 items-start">
      
         <!-- Details Sidebar (RIGHT - bigger now) -->
-        <div class="lg:col-span-12">
+        <div class="w-full">
           <div class="space-y-12">
 
             <!-- Location -->
-             <div class="grid md:grid-cols-6 gap-10 items-start">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-start">
 
               <!-- LEFT: Address -->
-              <div>
+              <div class="md:col-span-6">
                 <div class="flex items-start gap-3 mb-5">
                   <i data-lucide="map-pin" style="width:16px;height:16px;color:#C9A96E;flex-shrink:0;margin-top:2px;"></i>
                   <h3 class="font-sans-body text-xs tracking-[0.25em] uppercase" style="color: #1A1A1A; letter-spacing: 0.08em;">
@@ -41,42 +41,16 @@
               </div>
 
               <!-- RIGHT: Map -->
-              <div>
+              <div class="md:col-span-6">
                 <iframe
                   src="https://www.google.com/maps?q=1%20King%20Haakon%20Rd%2C%20Oslo%20Beach%2C%20Port%20Shepstone%2C%204240&output=embed"
-                  width="100%"
-                  height="100%"
-                  class="w-full h-full md:h-full"
+                  class="w-full min-h-[350px] md:h-full"
                   style="border:0; border-radius:12px;"
                   loading="lazy">
                 </iframe>
               </div>
-
             </div>
-            <!--<div>
-              <div class="flex items-start gap-3 mb-5">
-                <i data-lucide="map-pin" style="width:16px;height:16px;color:#C9A96E;flex-shrink:0;margin-top:2px;"></i>
-                <h3 class="font-sans-body text-xs tracking-[0.25em] uppercase" style="color: #1A1A1A; letter-spacing: 0.08em;">Location</h3>
-              </div>
-              <p class="font-serif-body text-sm leading-relaxed ml-6" style="color: #1A1A1A; font-weight: 300; line-height: 1.8;">
-                1 King Haakon Road<br>
-                Oslo Beach<br>
-                Port Shepstone<br>
-                Ugu District Municipality<br>
-                KwaZulu Natal<br>
-                South Africa, 4240
-              </p>
-              <div class="flex items-start gap-3 mb-5">
-                <iframe
-                  src="https://www.google.com/maps?q=1%20King%20Haakon%20Rd%2C%20Oslo%20Beach%2C%20Port%20Shepstone%2C%204240&output=embed"
-                  width="100%"
-                  height="300"
-                  style="border:0; border-radius:12px;"
-                  loading="lazy">
-                </iframe>
-              </div>
-            </div>-->
-        
+            
             <!-- Email -->
             <div>
               <div class="flex items-start gap-3 mb-5">
